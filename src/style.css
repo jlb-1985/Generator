@@ -81,6 +81,13 @@ form {
     transform: scale(1.1);
 }
 
+.examples {
+    font-size: 10px;
+    color:white;
+    padding: 10px;
+    margin-left: 70px;
+}
+
 footer {
     color: white;
     text-align: center;
