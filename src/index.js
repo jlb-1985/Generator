@@ -1,36 +1,33 @@
-document.addEventListener("DOMContentLoaded", function() {
-    function displayFacts(data) {
-        new Typewriter("#result", {
-            strings: data.map(fact => fact.fact),
-            autoStart: true,
-            delay: 1,
-            cursor: "",
-        });
-    }
 
-    async function generateFacts(event) {
-        event.preventDefault();
+function displayFacts(response) {
+  console.log(response.data.answer);
 
-        const axios = await import('axios');
+  new Typewriter("#result", {
+    strings: response.data.answer,
+    autoStart: true,
+    cursor: null,
+    delay: 75,
+  });
+}
 
-        const options = {
-            method: 'GET',
-            url: 'https://factopia.p.rapidapi.com/fact',
-            headers: {
-                'x-rapidapi-key': 'd3bade6b45msh554bcd1b7ef7561p1ad2e1jsnc22cc80bc110',
-                'x-rapidapi-host': 'factopia.p.rapidapi.com'
-            }
-        };
-        
-        try {
-            const response = await axios.request(options);
-            console.log(response.data);
-            displayFacts(response.data);
-        } catch (error) {
-            console.error(error);
-        }
-    }
+function showFacts(event) {
+  event.preventDefault();
 
-    let factsFormElement = document.querySelector("#facts-generator-form");
-    factsFormElement.addEventListener("submit", generateFacts);
-});
+  let instructionsInput = document.querySelector("#user-instructions").value;
+  let apiKey = "135f02bffcta720ff4c241394b466o99"; // Ensure this is your actual API key
+  let prompt = `User instructions: Generate a fact about ${instructionsInput}`;
+  let context = "You are a factchecker expert and love to research facts and educate others about facts. Your mission is to generate a fact and describe it in maximum 4 lines. Make sure you follow the user instructions. Begin and end with a emoticon";
+  let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
+  console.log("Generating facts");
+  console.log(`Prompt: ${prompt}`);
+  console.log(`Context: ${context}`);
+
+  let resultElement = document.querySelector("#result");
+  resultElement.innerHTML = "Alright!";
+
+  axios.get(apiUrl).then(displayFacts);
+}
+
+let factsForm = document.querySelector("#facts-generator-form");
+factsForm.addEventListener("submit", showFacts);

@@ -1,9 +1,7 @@
-
 html, body {
     height: 100%;
     margin: 0;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 body {
@@ -11,7 +9,6 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
-
 
 img {
     position: fixed;
@@ -23,7 +20,6 @@ img {
     z-index: -1;
 }
 
-
 h1, form, .result {
     text-align: center;
 }
@@ -34,27 +30,26 @@ h1 {
 
 form, .result {
     margin-top: -500px;
-    
-    
-}
-.input-text {
-    border: 2px solid #F68A43; /* Verander 'blue' naar de gewenste kleur */
-    padding: 10px;
-    border-radius: 6px; /* Optioneel: voor afgeronde hoeken */
 }
 
-.input-submit {
+.instructions {
+    border: 2px solid #F68A43;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.button {
     margin-left: 5px;
     border: 2px solid #F68A43;
     padding: 10px;
-    border-radius: 6px; /* Optioneel: voor afgeronde hoeken */
-    background-color: #F68A43; /* Optioneel: achtergrondkleur */
+    border-radius: 6px;
+    background-color: #F68A43;
     color: white;
-    cursor: pointer; 
+    cursor: pointer;
     transition: transform 0.3s ease;
 }
 
-.input-submit:hover {
+.button:hover {
     background-color: #F68A43;
     transform: scale(1.1);
 }
@@ -62,7 +57,6 @@ form, .result {
 footer {
     color: white;
     text-align: center;
-    padding: 10px 0; 
+    padding: 10px 0;
     background-color: #F68A43;
-    
 }

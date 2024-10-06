@@ -3,20 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/style.css">
+    <link href="src/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <title>Facts Generator</title>
 </head>
 <body>
-    <img src="src/images/close-up-portrait-attractive-young-woman-isolated.jpg" alt="">
+<img src="src/images/close-up-portrait-attractive-young-woman-isolated.jpg" alt="">
    
-    <h1>Facts Generator</h1>
+<h1>Facts Generator</h1>
     <form id="facts-generator-form">
-        <input type="text" class="input-text" placeholder="Enter a subject..." id="fact-input">
-        <input type="submit" class="input-submit" value="Submit">
+        <input type="text" 
+         placeholder="Enter a subject..." 
+         autofocus
+         required
+         autocomplete="off"
+        class="instructions"
+        id="user-instructions">
+        <input type="submit" class="button" id="button" value="Submit">
     </form>
     <div class="result" id="result"></div>
-    
+
     <footer>
         This was coded by <a href="https://github.com/jlb-1985" target="_blank">Joyce Blok</a> and is <a href="https://github.com/jlb-1985/Generator" target="_blank">open-sourced on Github</a> and is <a href="https://generator-gifted.netlify.app" target="_blank">hosted on Netlify</a>
     </footer>
