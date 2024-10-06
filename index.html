@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/style.css">
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <title>Facts Generator</title>
 </head>
 <body>
     <img src="src/images/close-up-portrait-attractive-young-woman-isolated.jpg" alt="">
    
-        <h1>Facts Generator</h1>
-        <form>
-            <input type="text" class="input-text" placeholder="Typ hier iets...">
-            <input type="submit" class="input-submit" value="Verzenden">
-        </form>
-        <div class="result">Dit is een resultaat</div>
+    <h1>Facts Generator</h1>
+    <form id="facts-generator-form">
+        <input type="text" class="input-text" placeholder="Enter a subject..." id="fact-input">
+        <input type="submit" class="input-submit" value="Submi">
+    </form>
+    <div class="result" id="result"></div>
     
     <footer>
         This was coded by <a href="https://github.com/jlb-1985" target="_blank">Joyce Blok</a> and is <a href="https://github.com/jlb-1985/Generator" target="_blank">open-sourced on Github</a> and is <a href="https://generator-gifted.netlify.app" target="_blank">hosted on Netlify</a>
     </footer>
+
+    <script src="src/index.js"></script>
 </body>
 </html>
