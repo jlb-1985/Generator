@@ -1,3 +1,5 @@
+CSS
+
 html, body {
     height: 100%;
     margin: 0;
@@ -7,7 +9,8 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between; /* Ensure footer stays at the bottom */
+    align-items: center;
 }
 
 img {
@@ -26,27 +29,51 @@ h1, form, .result {
 
 h1 {
     color: #F68A43;
+    margin-top: 20px; /* Add some space at the top */
+
+
 }
 
-form, .result {
-    margin-top: -500px;
+
+form {
+    margin-top: 20px; /* Add space between the title and form */
+}
+
+.result {
+    color: white;
+    max-width: 600px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center;
+    margin-top: 20px; /* Add space between the form and result */
 }
 
 .instructions {
-    border: 2px solid #F68A43;
+    border: 3px solid #F68A43;
     padding: 10px;
-    border-radius: 6px;
+    border-radius: 10px;
+    width: 400px;
+}
+
+.instructions:focus {
+    border-color: #fd6500; 
+    background-color: #FFF3E0;
+    outline: none; 
 }
 
 .button {
     margin-left: 5px;
     border: 2px solid #F68A43;
     padding: 10px;
-    border-radius: 6px;
+    border-radius: 10px;
     background-color: #F68A43;
     color: white;
+    font-size: 14px;
+    font-weight: bold;
     cursor: pointer;
     transition: transform 0.3s ease;
+    width: 100px;
 }
 
 .button:hover {
@@ -59,4 +86,7 @@ footer {
     text-align: center;
     padding: 10px 0;
     background-color: #F68A43;
+    width: 100%; /* Ensure footer spans the full width */
+    position: absolute;
+    bottom: 0;
 }
