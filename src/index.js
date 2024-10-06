@@ -24,7 +24,9 @@ function showFacts(event) {
   console.log(`Context: ${context}`);
 
   let resultElement = document.querySelector("#result");
-  resultElement.innerHTML = "Alright!";
+  resultElement.classList.remove("hidden");
+  resultElement.innerHTML = `<div class="generating">⏳ Generating a fact about ${instructionsInput}</div>`;
+ 
 
   axios.get(apiUrl).then(displayFacts);
 }

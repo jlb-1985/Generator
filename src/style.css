@@ -9,7 +9,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Ensure footer stays at the bottom */
+    justify-content: space-between; 
     align-items: center;
 }
 
@@ -27,26 +27,36 @@ h1, form, .result {
     text-align: center;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
 h1 {
+    font-size: 60px;
     color: #F68A43;
-    margin-top: 20px; /* Add some space at the top */
-
-
+    margin-top: 20px;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-in-out;
 }
 
 
 form {
-    margin-top: 20px; /* Add space between the title and form */
+    margin-top: 20px; =
+    animation: fadeIn 2s ease-in-out;
 }
 
 .result {
     color: white;
     max-width: 600px;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    justify-content: center; =
+    align-items: center; =
     text-align: center;
-    margin-top: 20px; /* Add space between the form and result */
+    margin-top: 20px; 
 }
 
 .instructions {
@@ -54,6 +64,8 @@ form {
     padding: 10px;
     border-radius: 10px;
     width: 400px;
+    animation: fadeIn 2s ease-in-out;
+    
 }
 
 .instructions:focus {
@@ -74,6 +86,8 @@ form {
     cursor: pointer;
     transition: transform 0.3s ease;
     width: 100px;
+    animation: fadeIn 2s ease-in-out;
+    
 }
 
 .button:hover {
@@ -86,14 +100,16 @@ form {
     color:white;
     padding: 10px;
     margin-left: 70px;
+    animation: fadeIn 2s ease-in-out;
 }
 
 footer {
+    animation: fadeIn 2s ease-in-out;
     color: white;
     text-align: center;
     padding: 10px 0;
     background-color: #F68A43;
-    width: 100%; /* Ensure footer spans the full width */
+    width: 100%;
     position: absolute;
     bottom: 0;
 }
